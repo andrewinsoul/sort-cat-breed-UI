@@ -1,4 +1,5 @@
-CatFinder
+# sort-cat-breed-UI
+
 This a simple React application that consumes the catFindAPi which can be found [Here](https://github.com/andrewinsoul/catFindAPI)
 <br/>
 <br/>
