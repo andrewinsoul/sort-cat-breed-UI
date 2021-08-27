@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+/* eslint-disable react/react-in-jsx-scope */
 import './App.css';
+import { useState } from 'react';
+import CatList from './components/CatList';
+import FilterBar from './components/Search';
 
-function App() {
+/**
+ *
+ * @returns {JSX} - returns the JSX for the base component
+ */
+const App = () => {
+  const [limit, setLimit] = useState(12);
+  const [catBreed, setCatBreed] = useState('any');
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="fixed-widget">
+        <div className="Navbar">
+          <img src="/logo192.png" alt="app icon" className="logo" />
+          <p className="title">CatSort</p>
+        </div>
+        <div>
+          <h5 className="info">
+            Let us help you sort the cats in descending
+            order based on certain attributes
+          </h5>
+          <FilterBar
+            limit={limit}
+            setLimit={setLimit}
+            setCatBreed={setCatBreed}
+          />
+
+        </div>
+      </div>
+      <section className="App-header">
+        <CatList
+          limit={limit}
+          setLimit={setLimit}
+          catBreed={catBreed}
+          setCatBreed={setCatBreed}
+        />
+      </section>
     </div>
+
   );
-}
+};
 
 export default App;
