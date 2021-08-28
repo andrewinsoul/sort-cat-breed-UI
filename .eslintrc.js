@@ -33,6 +33,7 @@ module.exports = {
     'comma-dangle': 0,
     'react/button-has-type': 0,
     'react/prop-types': 0,
+    'no-alert': 0,
     curly: ['error', 'multi-line'],
     'no-return-assign': 0,
     'class-methods-use-this': ['error', { exceptMethods: ['render'] }],

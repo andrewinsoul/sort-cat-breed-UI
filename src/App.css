@@ -20,6 +20,11 @@
   margin-top: 23vh;
 }
 
+.btn-text {
+  font-weight: bold;
+  color: #282c34
+}
+
 .Navbar {
   background-color: white;
   display: flex;
@@ -57,6 +62,7 @@
   /* justify-content: center; */
   background-color: #282c34;
   width: 86%;
+  padding-bottom: 33px;
 }
 
 .cat-detail {
@@ -109,10 +115,22 @@
   align-self: center;
   justify-content: center;
   align-items: center;
-  margin-top: 50vh;
+  position: fixed;
+  /* margin-top: 50vh; */
+  top: 50vh;
   height: 30px;
   -webkit-animation: spin 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: spin 2s linear infinite; /* Safari */
+}
+
+.footer {
+  padding: 14px;
+  background-color: orangered
+}
+
+.footer-text {
+  color:#fff;
+  font-size: small;
 }
 
 /* Safari */
@@ -141,7 +159,9 @@
   .filter-panel {
     flex-direction: column;
   }
-
+  .loader {
+    top: 60vh;
+  }
   .input-container {
     width: 100%;
     margin-bottom: 2vh;

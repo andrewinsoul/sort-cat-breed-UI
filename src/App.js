@@ -2,7 +2,8 @@
 import './App.css';
 import { useState } from 'react';
 import CatList from './components/CatList';
-import FilterBar from './components/Search';
+import FilterBar from './components/SortPanel';
+import Footer from './components/Footer';
 
 /**
  *
@@ -40,6 +41,7 @@ const App = () => {
           setCatBreed={setCatBreed}
         />
       </section>
+      <Footer />
     </div>
 
   );

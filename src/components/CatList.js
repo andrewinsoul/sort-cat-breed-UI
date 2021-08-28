@@ -12,7 +12,9 @@ const CatList = ({
 
   const fetchData = async () => {
     setLoading(true);
-    const BASE_URL = 'https://catapi666.herokuapp.com/api/v1/get';
+    const BASE_URL = process.env.NODE_ENV === 'development'
+      ? 'http://localhost:8000/api/v1/get'
+      : 'https://catapi666.herokuapp.com/api/v1/get';
     try {
       let data;
       if (catBreed === 'children friendly') {

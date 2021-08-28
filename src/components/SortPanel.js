@@ -56,7 +56,7 @@ const FilterBar = ({
           setCatBreed(catBreed_);
         }}
       >
-        <p>Fetch</p>
+        <p className="btn-text">Sort</p>
       </button>
     </div>
 
