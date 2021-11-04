@@ -5,7 +5,7 @@ const FilterBar = ({
   setCatBreed,
 }) => {
   const [inputText, setInputText] = useState('');
-  const [catBreed_, setCatBreed_] = useState('any');
+  const [catBreedLocal, setCatBreedLocal] = useState('any');
   return (
     <div className="filter-panel">
       <div className="input-container">
@@ -37,9 +37,9 @@ const FilterBar = ({
         </label>
         <select
           id="breed"
-          value={catBreed_}
+          value={catBreedLocal}
           className="input-widget"
-          onChange={(event) => setCatBreed_(event.target.value)}
+          onChange={(event) => setCatBreedLocal(event.target.value)}
         >
           <option value="any">Any</option>
           <option value="children friendly">Children Friendly</option>
@@ -53,7 +53,7 @@ const FilterBar = ({
         className="queryButton"
         onClick={() => {
           setLimit(inputText);
-          setCatBreed(catBreed_);
+          setCatBreed(catBreedLocal);
         }}
       >
         <p className="btn-text">Sort</p>

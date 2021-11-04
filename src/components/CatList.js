@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/button-has-type */
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios';
+import Services from '../util/service';
 
 const CatList = ({
   limit,
@@ -18,22 +18,22 @@ const CatList = ({
     try {
       let data;
       if (catBreed === 'children friendly') {
-        const res = await Axios.get(
+        const res = await Services.get(
           `${BASE_URL}/child_friendly/breed?no_of_breeds=${limit || 'all'}`
         );
         data = res.data.data;
       } else if (catBreed === 'stranger friendly') {
-        const res = await Axios.get(
+        const res = await Services.get(
           `${BASE_URL}/stranger_friendly/breed?no_of_breeds=${limit || 'all'}`
         );
         data = res.data.data;
       } else if (catBreed === 'dog friendly') {
-        const res = await Axios.get(
+        const res = await Services.get(
           `${BASE_URL}/dog_friendly/breed?no_of_breeds=${limit || 'all'}`
         );
         data = res.data.data;
       } else {
-        const res = await Axios.get(
+        const res = await Services.get(
           `https://api.thecatapi.com/v1/breeds?limit=${limit || 'all'}`
         );
         data = res.data;
